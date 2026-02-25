@@ -70,6 +70,7 @@ const loginAdmin = async(req,res)=>{
         const accessToken = await generateTokenForAdmin(email);
         res.status(200).cookie('accessToken', accessToken, {
             httpOnly: true,
+            sameSite: "none",
             maxAge: 60 * 60 * 1000, // 1 hour
         }).json({
             success:true,

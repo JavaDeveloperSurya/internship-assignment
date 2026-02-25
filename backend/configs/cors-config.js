@@ -7,7 +7,8 @@ const corsConfig=()=>{
             "https://internship-assignment-ten-gules.vercel.app/"
         ],
         methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"]
     })
 }
 
