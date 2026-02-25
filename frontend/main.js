@@ -9,10 +9,9 @@ const savedAdminToken = localStorage.getItem('adminAccessToken') || '';
 userTokenInput.value = savedUserToken;
 adminTokenInput.value = savedAdminToken;
 if (!bookModifyTokenInput.value) bookModifyTokenInput.value = savedUserToken || savedAdminToken;
-
+const API_BASE_URL = 'https://internship-assignment-o8b3.onrender.com';
 function getBaseUrl() {
-//   return document.getElementById('baseUrl').value.trim().replace(/\/$/, '');
-return 'https://internship-assignment-o8b3.onrender.com'
+  return API_BASE_URL
 }
 
 function showResponse(data, status = null) {
